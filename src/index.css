@@ -1,13 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+:root {
+  --primary: #7c7c7c;
+  --error: #e7195a;
+}
 body {
+  background: #f1f1f1;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins";
+  overflow-y: scroll;
+}
+header {
+  background: #f1f1f1;
+}
+header .container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container h1{
+  border-left: 6px solid rgb(71, 71, 172);
+  padding-left: 5px;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.home, .cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.shops, .customer {
+  display: flex;
+  border: 0px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex: 1;
+  min-height: 760px;
+}
+
+.customer{
+  flex: 4;
+}
+
+.shops button{
+  background-color: #3600b0;
+  border-radius: 40px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 760px;
+  border: 0px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  margin-left: 10px;
+  flex: 5;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: arial;
+  overflow: hidden;
+  width: 300px;
+}
+
+.couponCard{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: arial;
+  width: 300px; 
+  overflow: hidden;
+}
+
+.coupons{
+  display: flex;
+  flex-direction: row;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productsHistoryOrder{
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  overflow-y: scroll;
+}
+
+.productsHistoryItem{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productsHistoryId h3{
+  text-align: center;
+}
+
+.productsHistoryTotal h2{
+  text-align: right;
+}
+
+.productsHistoryPurchase{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.customerHistory {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+}
+
+button {
+  background-color: #6528F7;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button:hover{
+  background-color: #6428A7;
+  cursor: pointer;
+}
+
+.products p {
+  margin-bottom: 10px;
+}
+
+.shop-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.shop-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.shop-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.shop-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: default;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
 }
