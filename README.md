@@ -1,6 +1,6 @@
-# Medicine app
+# Medicine app backend
 
-Medicine delivery app
+Medicine delivery app backend
 
 ---
 ## Requirements
